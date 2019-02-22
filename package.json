@@ -1,0 +1,28 @@
+{
+  "name": "front201902191054-nuxt-hello",
+  "version": "1.0.0",
+  "description": "My outstanding Nuxt.js project",
+  "author": "Breaker-93",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "nuxt": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": "8888"
+    }
+  }
+}
