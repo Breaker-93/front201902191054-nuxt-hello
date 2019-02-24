@@ -5,16 +5,23 @@
       <h1 class="title">
         This is about html!接收到的参数为：{{$route.params.id}}
       </h1>
+      <h1>姓名：{{info.name}}</h1>
+      <h2>年龄：{{info.age}}</h2>
+      <h2>兴趣：{{info.interest}}</h2>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
-
+import axios from 'axios'
 export default {
   components: {
     Logo
+  },
+  async asyncData () {
+    let {data} = await axios.get('https://api.myjson.com/bins/1a6ffa')
+    return {info: data}
   }
 }
 </script>

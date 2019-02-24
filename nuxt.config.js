@@ -48,16 +48,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    loaders: [
-      {
-        test:/\.(png|jpe?g|gif|svg)$/,
-        loader:"url-loader",
-        query:{
-          limit:100000, //100kB左右
-          name:'img/[name].[hash].[ext]'
-        }
-      }
-    ],
+    loaders: {
+      imgUrl: { limit: 10000 }
+    },
     /*
     ** You can extend webpack config here
     */
